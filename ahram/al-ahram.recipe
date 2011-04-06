@@ -1,3 +1,4 @@
+# coding=utf-8
 __license__   = 'GPL v3'
 __copyright__ = '2011, Hassan Williamson <haz at hazrpg.co.uk>'
 '''
@@ -36,25 +37,26 @@ class AlAhram(BasicNewsRecipe):
                         ]
 
     feeds             = [
-                            (u'\u0627\u0644\u0623\u0648\u0644\u0649', 'http://www.ahram.org.eg/RssXml.aspx?CategoryID=25'),
-                            (u'\u0645\u0635\u0631', 'http://www.ahram.org.eg/RssXml.aspx?CategoryID=27'),
-                            (u'\u0627\u0644\u0645\u062d\u0627\u0641\u0638\u0627\u062a', 'http://www.ahram.org.eg/RssXml.aspx?CategoryID=29'),
-                            (u'\u0627\u0644\u0648\u0637\u0646 \u0627\u0644\u0639\u0631\u0628\u064a', 'http://www.ahram.org.eg/RssXml.aspx?CategoryID=31'),
-                            (u'\u062a\u0642\u0627\u0631\u064a\u0631 \u0627\u0644\u0645\u0631\u0627\u0633\u0644\u064a\u0646', 'http://www.ahram.org.eg/RssXml.aspx?CategoryID=2'),
-                            (u'\u062a\u062d\u0642\u064a\u0642\u0627\u062a', 'http://www.ahram.org.eg/RssXml.aspx?CategoryID=3'),
-                            (u'\u0642\u0636\u0627\u064a\u0627 \u0648\u0627\u0631\u0627\u0621', 'http://www.ahram.org.eg/RssXml.aspx?CategoryID=4'),
-                            (u'\u0627\u0642\u062a\u0635\u0627\u062f', 'http://www.ahram.org.eg/RssXml.aspx?CategoryID=5'),
-                            (u'\u0631\u064a\u0627\u0636\u0629', 'http://www.ahram.org.eg/RssXml.aspx?CategoryID=6'),
-                            (u'\u062d\u0648\u0627\u062f\u062b', 'http://www.ahram.org.eg/RssXml.aspx?CategoryID=38'),
-                            (u'\u062f\u0646\u064a\u0627 \u0627\u0644\u062b\u0642\u0627\u0641\u0629', 'http://www.ahram.org.eg/RssXml.aspx?CategoryID=7'),
-                            (u'\u0627\u0644\u0645\u0631\u0627\u0629 \u0648\u0627\u0644\u0637\u0641\u0644', 'http://www.ahram.org.eg/RssXml.aspx?CategoryID=8'),
-                            (u'\u064a\u0648\u0645 \u062c\u062f\u064a\u062f', 'http://www.ahram.org.eg/RssXml.aspx?CategoryID=9'),
-                            (u'\u0627\u0644\u0643\u062a\u0627\u0628', 'http://www.ahram.org.eg/RssXml.aspx?CategoryID=10'),
-                            (u'\u0627\u0644\u0627\u0639\u0645\u062f\u0629', 'http://www.ahram.org.eg/RssXml.aspx?CategoryID=11'),
-                            (u'\u0623\u0631\u0627\u0621 \u062d\u0631\u0629', 'http://www.ahram.org.eg/RssXml.aspx?CategoryID=59'),
-                            (u'\u0645\u0644\u0641\u0627\u062a \u0627\u0644\u0627\u0647\u0631\u0627\u0645', 'http://www.ahram.org.eg/RssXml.aspx?CategoryID=12'),
-                            (u'\u0628\u0631\u064a\u062f \u0627\u0644\u0627\u0647\u0631\u0627\u0645', 'http://www.ahram.org.eg/RssXml.aspx?CategoryID=15'),
-                            (u'\u0627\u0644\u0627\u062e\u064a\u0631\u0629', 'http://www.ahram.org.eg/RssXml.aspx?CategoryID=16'),
+                            (u'الأولى', 'http://www.ahram.org.eg/RssXml.aspx?CategoryID=25'),
+                            (u'مصر', 'http://www.ahram.org.eg/RssXml.aspx?CategoryID=27'),
+                            (u'المحافظات', 'http://www.ahram.org.eg/RssXml.aspx?CategoryID=29'),
+                            (u'الوطن العربي', 'http://www.ahram.org.eg/RssXml.aspx?CategoryID=31'),
+                            (u'العالم', 'http://www.ahram.org.eg/RssXml.aspx?CategoryID=26'),
+                            (u'تقارير المراسلين', 'http://www.ahram.org.eg/RssXml.aspx?CategoryID=2'),
+                            (u'تحقيقات', 'http://www.ahram.org.eg/RssXml.aspx?CategoryID=3'),
+                            (u'قضايا واراء', 'http://www.ahram.org.eg/RssXml.aspx?CategoryID=4'),
+                            (u'اقتصاد', 'http://www.ahram.org.eg/RssXml.aspx?CategoryID=5'),
+                            (u'رياضة', 'http://www.ahram.org.eg/RssXml.aspx?CategoryID=6'),
+                            (u'حوادث', 'http://www.ahram.org.eg/RssXml.aspx?CategoryID=38'),
+                            (u'دنيا الثقافة', 'http://www.ahram.org.eg/RssXml.aspx?CategoryID=7'),
+                            (u'المراة والطفل', 'http://www.ahram.org.eg/RssXml.aspx?CategoryID=8'),
+                            (u'يوم جديد', 'http://www.ahram.org.eg/RssXml.aspx?CategoryID=9'),
+                            (u'الكتاب', 'http://www.ahram.org.eg/RssXml.aspx?CategoryID=10'),
+                            (u'الاعمدة', 'http://www.ahram.org.eg/RssXml.aspx?CategoryID=11'),
+                            (u'أراء حرة', 'http://www.ahram.org.eg/RssXml.aspx?CategoryID=59'),
+                            (u'ملفات الاهرام', 'http://www.ahram.org.eg/RssXml.aspx?CategoryID=12'),
+                            (u'بريد الاهرام', 'http://www.ahram.org.eg/RssXml.aspx?CategoryID=15'),
+                            (u'الاخيرة', 'http://www.ahram.org.eg/RssXml.aspx?CategoryID=16'),
                         ]
 
 
