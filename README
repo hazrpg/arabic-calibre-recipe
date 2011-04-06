@@ -1,0 +1,29 @@
+I'm new to releasing open-source code, so this is my attempt at a README file.
+
+- README
+	This document.
+
+- encode.py
+	I use this file to encode arabic characters into a unicode string so that
+	calibre can work with it fine. Have a look at the recipe to see what I mean.
+	
+	To use, edit the file encode.txt and add the string you'd like to encode, and
+	then run this script with:
+	
+	python encode.py
+
+- encode.txt
+	See encode.py, basically this is where you put the arabic string.
+	Only use line 1, it will ignore other lines.
+
+- ahram/
+	A directory containing the ahram recipe and a few other scripts.
+
+- ahram/test.sh
+	This is the script to run a test build of the recipe.
+
+- ahram/build.sh
+	This is a script to build the recipe into a mobi file.
+
+- ahram/al-ahram.recipe
+	This is the main recipe for the Al-Ahram arabic news feed.
