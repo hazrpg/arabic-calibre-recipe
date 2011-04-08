@@ -10,17 +10,22 @@ class AlAhram(BasicNewsRecipe):
     title                  = 'Al-Ahram'
     __author__             = 'Hassan Williamson, HazRPG'
     description            = 'News from Egypt in Arabic.'
+    language               = 'ar'
+    encoding               = 'utf8'
+
+    cover_url = 'http://www.ahram.org.eg/images/ahram_head_new_.jpg'
+    #masthead_url = 'http://www.ahram.org.eg/images/ahram_head_new_.jpg'
+
     oldest_article         = 7
     max_articles_per_feed  = 100
     no_stylesheets         = True
     #delay                 = 1
     use_embedded_content   = False
-    encoding               = 'utf8'
     publisher              = 'Al-Ahram'
     category               = 'News'
-    language               = 'ar'
     publication_type       = 'newsportal'
-    extra_css              = ' body{ font-family: Verdana,Helvetica,Arial,sans-serif; direction: rtl; } .txtTitle{ font-weight: bold; } '
+
+    extra_css              = ' body{ font-family: Verdana,Helvetica,Arial,sans-serif; direction: rtl; } .bbtitle{ font-weight: bold; font-size: 2em; } .bbsubtitle{ font-size: 1.3em; } '
 
 
     keep_only_tags    = [
@@ -29,11 +34,11 @@ class AlAhram(BasicNewsRecipe):
 
     remove_tags       = [
                             dict(name='div', attrs={'class':['bbnav', 'bbsp']}),
-                            dict(name='div', attrs={'id':['AddThisButton']})
+                            dict(name='div', attrs={'id':['AddThisButton']}),
                         ]
 
     remove_attributes = [
-                            'width','height'
+                            'width','height','style'
                         ]
 
     feeds             = [

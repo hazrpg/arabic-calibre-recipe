@@ -1,1 +1,1 @@
-ebook-convert al-ahram.recipe al-ahram.mobi
+ebook-convert al-ahram.recipe al-ahram.pdf
