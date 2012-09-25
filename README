@@ -18,6 +18,10 @@ I'm new to releasing open-source code, so this is my attempt at a README file.
 	To use, edit the file encode.txt and add the string you'd like to encode, and
 	then run this script with:
 	
+	./encode.py
+	
+	or
+	
 	python encode.py
 
 - encode.txt
