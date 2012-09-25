@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # This is used to encode arabic characters to something python can use.
 f = open("encode.txt", 'r')
 i = f.readline()
