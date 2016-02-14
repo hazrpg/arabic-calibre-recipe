@@ -3,7 +3,7 @@ I'm new to releasing open-source code, so this is my attempt at a README file.
 - README
 	This document.
 
-- COPYING
+- LICENSE
 	This is the full licence used for code include in this project.
 
 - encode.py
