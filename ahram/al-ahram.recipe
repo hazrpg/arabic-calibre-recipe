@@ -35,6 +35,7 @@ class AlAhram(BasicNewsRecipe):
     remove_tags       = [
                             dict(name='div', attrs={'class':['bbnav', 'bbsp']}),
                             dict(name='div', attrs={'id':['AddThisButton']}),
+                            dict(name='a', attrs={'class':['twitter-share-button']}),
                         ]
 
     remove_attributes = [
