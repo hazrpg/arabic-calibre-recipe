@@ -25,7 +25,7 @@ class AlAhram(BasicNewsRecipe):
     category               = 'News'
     publication_type       = 'newsportal'
 
-    extra_css              = ' body{ font-family: Verdana,Helvetica,Arial,sans-serif; direction: rtl; } .bbtitle{ font-weight: bold; font-size: 2em; } .bbsubtitle{ font-size: 1.3em; } '
+    extra_css              = ' body{ font-family: Verdana,Helvetica,Arial,sans-serif; direction: rtl; } .bbtitle{ font-weight: bold; font-size: 2em; } .bbsubtitle{ font-size: 1.3em; } #WriterImage{ height: 10px; } '
 
 
     keep_only_tags    = [
