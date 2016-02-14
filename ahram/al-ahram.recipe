@@ -36,6 +36,7 @@ class AlAhram(BasicNewsRecipe):
                             dict(name='div', attrs={'class':['bbnav', 'bbsp']}),
                             dict(name='div', attrs={'id':['AddThisButton']}),
                             dict(name='a', attrs={'class':['twitter-share-button']}),
+                            dict(name='div', attrs={'id':['ReaderCount']}),
                         ]
 
     remove_attributes = [
