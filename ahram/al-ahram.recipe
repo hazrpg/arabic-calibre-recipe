@@ -1,6 +1,6 @@
 # coding=utf-8
 __license__   = 'GPL v3'
-__copyright__ = '2011-2012,2016, Hassan Williamson <haz at hazrpg.co.uk>'
+__copyright__ = '2011-2016, Hassan Williamson <haz at hazrpg.co.uk>'
 '''
 ahram.org.eg
 '''
@@ -12,10 +12,7 @@ class AlAhram(BasicNewsRecipe):
     description            = 'The Arabic version of the Al-Ahram newspaper.'
     language               = 'ar'
     encoding               = 'utf8'
-
-    cover_url = 'http://www.ahram.org.eg/Media/News/2015/3/14/2015-635619650946000713-600.jpg'
-    #masthead_url = 'http://www.ahram.org.eg/Media/News/2015/3/14/2015-635619650946000713-600.jpg'
-
+    cover_url              = 'http://www.ahram.org.eg/Media/News/2015/3/14/2015-635619650946000713-600.jpg'
     oldest_article         = 7
     max_articles_per_feed  = 100
     no_stylesheets         = True
@@ -26,7 +23,6 @@ class AlAhram(BasicNewsRecipe):
     publication_type       = 'newsportal'
 
     extra_css              = ' body{ font-family: Verdana,Helvetica,Arial,sans-serif; direction: rtl; } .bbtitle{ font-weight: bold; font-size: 2em; } .bbsubtitle{ font-size: 1.3em; } #WriterImage{ height: 10px; } '
-
 
     keep_only_tags    = [
                             dict(name='div', attrs={'class':['bbcolright']})
