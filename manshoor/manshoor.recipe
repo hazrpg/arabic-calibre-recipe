@@ -1,0 +1,48 @@
+# coding=utf-8
+__license__   = 'GPL v3'
+__copyright__ = '2019, Hassan Williamson & Ahmad Refai'
+'''
+manshoor.com
+'''
+from calibre.web.feeds.recipes import BasicNewsRecipe
+
+class Manshoor(BasicNewsRecipe):
+    title                  = u'Manshoor (منشور)'
+    __author__             = 'Hassan Williamson & Ahmad Refai'
+    description            = 'The Arabic version of the Manshoor (Egypt Independent) newspaper.'
+    language               = 'ar'
+    encoding               = 'utf8'
+    cover_url              = 'https://manshoor.com/themes/frontend/images/logo.png'
+    oldest_article         = 30
+    max_articles_per_feed  = 100
+    no_stylesheets         = True
+    #delay                 = 1
+    use_embedded_content   = False
+    publisher              = 'Manshoor'
+    category               = 'News'
+    publication_type       = 'newsportal'
+
+    extra_css              = ' body{ font-family: Verdana,Helvetica,Arial,sans-serif; direction: rtl; } .content-post-title{ font-weight: bold; font-size: 2em; } h2{ font-size: 1.3em; } img{ max-width: 100%; } .content-post-main-image p, .image{ font-size: 0.7em; } '
+
+    keep_only_tags    = [
+                            dict(name='div', attrs={'class': ['content-post']})
+                        ]
+
+    remove_tags       = [
+                            dict(name='div', attrs={'class': ['col-md-3']}),
+                            dict(name='div', attrs={'class': ['author-social-accounts']}),
+                            dict(name='a', attrs={'class': ['post-np-prev']}),
+                            dict(name='div', attrs={'class': ['hidden-xs content-post-obsession ']}),
+                            dict(name='div', attrs={'class': ['content-post-obsession ']}),
+                            dict(name='div', attrs={'class': ['sharing-wrapper-wrapper ']}),
+                            dict(name='svg', attrs={'class': ['icon icon-twitter']}),
+                            dict(name='h4'),
+                        ]
+
+    remove_attributes = [
+                            'width','height','style'
+                        ]
+
+    feeds             = [
+                            (u'منشو', 'https://manshoor.com/feed'),
+                        ]
