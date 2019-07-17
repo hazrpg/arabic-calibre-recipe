@@ -1,0 +1,49 @@
+#!/usr/bin/env python2
+# coding=utf-8
+__license__   = 'GPL v3'
+__copyright__ = '2019, Hassan Williamson & Ahmad Refai'
+'''
+alantologia.com
+'''
+from calibre.web.feeds.recipes import BasicNewsRecipe
+
+class AlAntologia(BasicNewsRecipe):
+    title                  = u'Al-Antologia (الأنطولوجي)'
+    __author__             = 'Hassan Williamson & Ahmad Refai'
+    description            = 'The Arabic version of the Manshoor (Egypt Independent) newspaper.'
+    language               = 'ar'
+    encoding               = 'utf8'
+    cover_url              = 'http://alantologia.com/styles/logia/logo.og.png'
+    oldest_article         = 30
+    max_articles_per_feed  = 100
+    no_stylesheets         = True
+    #delay                 = 1
+    use_embedded_content   = False
+    publisher              = 'Al-Antologia'
+    category               = 'News'
+    publication_type       = 'newsportal'
+
+    extra_css              = ' body{ font-family: Verdana,Helvetica,Arial,sans-serif; direction: rtl; } .content-post-title{ font-weight: bold; font-size: 2em; } h2{ font-size: 1.3em; } img{ max-width: 100%; } .content-post-main-image p, .image{ font-size: 0.7em; } '
+
+    keep_only_tags    = [
+                            dict(name='div', attrs={'class': ['p-body-inner']})
+                        ]
+
+    remove_tags       = [
+                            dict(name='div', attrs={'class': ['p-breadcrumbs--parent']}),
+                            dict(name='div', attrs={'class': ['blockMessage blockMessage--none']}),
+                            dict(name='div', attrs={'class': ['p-breadcrumbs--parent p-breadcrumbs--bottom']}),
+                            dict(name='div', attrs={'class': ['block-outer block-outer--after']}),
+                            dict(name='div', attrs={'class': ['message-cell message-cell--user']}),
+                            dict(name='dl', attrs={'class': ['tagList tagList--thread-24592 ']}),
+                            dict(name='div', attrs={'class': ['p-description']}),
+                            dict(name='div', attrs={'class': ['message-header']}),
+                        ]
+
+    remove_attributes = [
+                            'width','height','style'
+                        ]
+
+    feeds             = [
+                            (u'الأنطولوجيا', 'http://alantologia.com/node/-/index.rss'),
+                        ]
